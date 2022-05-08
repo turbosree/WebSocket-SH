@@ -49,6 +49,7 @@ if(BUILD_LIBRARY)
     find_package(is-json-xtypes REQUIRED)
     find_package(OpenSSL REQUIRED)
     find_package(websocketpp REQUIRED)
+    find_package(Boost REQUIRED COMPONENTS system)
 endif()
 
 ###################################################################################
@@ -108,6 +109,7 @@ if(BUILD_LIBRARY)
         PRIVATE
             is::json-xtypes
             OpenSSL::SSL
+	    Boost::system
         )
 
     target_include_directories(${PROJECT_NAME}
